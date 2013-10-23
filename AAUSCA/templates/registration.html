@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+
+{% block title %} Registration {% endblock %}
+
+{% block content %}
+
+<div class="row-fluid">
+      <div class="span10">
+
+     {% if errors %}
+          <div class="alert alert-error">
+              <button type="button" class="close" data-dismiss="alert">x</button>
+                <strong>Oh snap!</strong> 
+                {% for i in errors %}
+                  <li> {{ i }} </li>
+                {% endfor %}
+          </div>
+      {% endif %}   
+
+      <form method="post" action="/register_member/">
+        <table align='center' class='table' id='request-table1'>
+          <!--tr><td class='lbl'>Id:&nbsp;</td><td><input type='text'></td></tr-->
+          <tr><td class='lbl'>First Name:&nbsp;</td><td><input type='text' name="inputName" ></td></tr>
+          <tr><td class='lbl'>Father&apos;s Name:&nbsp;</td><td><input type='text' name="inputFathersName" ></td></tr>
+          <tr><td class='lbl'>Grand Father&apos;s Name:&nbsp;</td><td><input type='text' name="inputGrandFathersName" ></td></tr>
+          <tr><td class='lbl'>BirthDate:&nbsp;</td>
+              <td>
+
+            <select style='width:65px;' name="inputBirthDay">
+              <option>Day</option>
+              {% load aausca_extras %}
+              {% for i in 31|get_range %}
+                  <option>{{ forloop.counter }}</option>
+              {% endfor %}
+            </select>
+            <select style='width:75px;' name="inputBirthMonth">
+              <option>Month</option>
+              {% for i in 12|get_range %}
+                  <option>{{ forloop.counter }}</option>
+              {% endfor %}
+            </select>
+          <select style='width:70px;' name="inputBirthYear">
+              <option>Year</option>
+              {% for i in 1930|up_to_now %}
+                  <option>{{ i }}</option>
+              {% endfor %}
+            </select>
+          </td>
+        </tr>
+        
+          <tr><td class='lbl'>Wereda:&nbsp;</td><td><input type='text' name="inputWereda" ></td></tr>
+          <tr><td class='lbl'>House No:&nbsp;</td><td><input type='text' name="inputHouseNumber" ></td></tr>
+          <tr><td class='lbl'>Subcity:&nbsp;</td><td>
+            <select name="inputSubcity">
+              <option> Addis Ketema </option>
+              <option> Akaki Kality </option>
+              <option> Arada </option>
+              <option> Bole </option>
+              <option> Gulele </option>
+              <option> Kirkos </option>
+              <option> Kolfe Keranyo </option>             
+              <option> Lideta </option>
+              <option> Yeka </option>     
+            </select></td></tr>          
+          
+          <tr><td class='lbl'>Home phone no:&nbsp;</td><td><input type='text' name="inputHousePhoneNumber" ></td></tr>
+          <tr><td class='lbl'>Sex:&nbsp;</td><td><input type='radio' name='inputSex' value="Male">&nbsp;Male&nbsp;<input type='radio' 
+                                                  name='inputSex' value="Female">&nbsp;Female&nbsp;</td></tr>          
+          <tr><td class='lbl'>Office Tel-No:&nbsp;</td><td><input type='text' name="inputOfficePhoneNumber" ></td></tr>
+          <tr><td class='lbl'>Cellphone No:&nbsp;</td><td><input type='text' name="inputCellPhoneNumber" ></td></tr>
+          <tr><td class='lbl'>P.O.Box:&nbsp;</td><td><input type='text' name="inputPOBox" ></td></tr>              
+          <tr><td class='lbl'>Salary:&nbsp;</td><td><input type='text' name="inputSalary" ></td></tr>          
+          <tr><td class='lbl'>Campus:&nbsp;</td><td>
+            <select name="inputCampus">
+              <option> 6 kilo </option>
+              <option> 5 kilo </option>
+              <option> 4 kilo </option>
+              <option> Lideta </option>
+              <option> Tikur Anbessa </option>
+              <option> Commerce </option>
+              <option> Akaki </option>    
+            </select></td></tr>
+
+          <tr><td class='lbl'>Employment type:&nbsp;</td><td><input type='radio' name='inputEmploymentType' value="Permanent">&nbsp;Permanent Employee&nbsp; <input type='radio' name='inputEmploymentType' value="Contract">&nbsp;Contract Worker&nbsp;</td></tr> 
+
+          <tr><td class='lbl'>Department:&nbsp;</td><td><input type='text' name="inputDepartment" ></td></tr>
+          <tr><td class='lbl'>Faculty:&nbsp;</td><td><input type='text' name="inputFaculty" ></td></tr>
+          <tr><td class='lbl'>Savings Percentage:&nbsp;</td>
+            <td><select name="inputSavingsPercentage">
+              {% for i in 5|up_to_hundred %}
+                  <option> {{ i }} </option>
+              {% endfor %}
+            </select></td></tr>
+          <tr><td class='lbl'>e-mail:&nbsp;</td><td><input type='text' name="inputEmail" ></td></tr>
+          <tr><td class='lbl'>Password:&nbsp;</td><td><input type='password' name="inputPassword" ></td></tr>
+          <tr><td class='lbl'>Password:&nbsp;</td><td><input type='password' name="inputRetypePassword" ></td></tr>                   
+          <tr><td colspan='2'><button class='btn btn-primary pull-right' style='margin-right:120px;' id='loan-next'>Register</button></td></tr> 
+
+
+          </table>    
+      </form>
+      </div>
+</div>
+{% endblock %}

@@ -1,0 +1,290 @@
+#container
+{
+	margin: 0px auto; 
+	width:980px; 
+	height:100%; 
+	background-color:#FFFFFF;
+	margin-top:0px;
+	box-shadow: 0px 0px 1px #999;
+	min-height: 820px;
+	border-top: none;
+	position: relative;
+
+}
+
+#navbar
+{	
+	
+	top:0;
+	width: 981px;
+	z-index: 1000;
+}
+#brand
+{	
+	text-shadow:0px 0px 1px #fff;
+	font-size:15px;
+	font-weight: bold;
+	color:#099;
+}
+.navbar-inner
+{
+	border-radius: 0px;
+}
+#searchdiv
+{	
+	margin-top:30px;
+	margin-right:20px;		
+}
+#request-table1, #request-table2
+{
+	margin-top:105px;
+	width:60%;
+}
+#request-table1 .lbl, #request-table2 .lbl, #memberprofile .lbl
+{
+	text-align: right;
+
+}
+.lbl, .table .lbl
+{
+	text-align: right;
+}
+#profileimage > img
+{
+	width:200px;
+	height:150px;	
+	box-shadow: 0px 0px 5px #000;
+}
+#profileimage
+{	
+	width:240px;
+	height:220px;	
+	margin-left:50px;		
+	margin-top:135px;
+	position: absolute;
+}
+#memberprofile
+{
+	width:600px;
+	margin-top:150px;
+	margin-left:320px;
+	color:#667;	
+}
+.titles
+{
+	color:#099;
+	font-size:16px;	
+	font-weight: bold;
+}
+.titles:hover
+{
+	text-decoration: none;
+}
+#loginheader {
+
+color: #ffffff;
+text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+background-color: #006dcc;
+background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0044cc));
+background-image: -webkit-linear-gradient(top, #0088cc, #0044cc);
+background-image: -o-linear-gradient(top, #0088cc, #0044cc);
+background-image: linear-gradient(to bottom, #0088cc, #0044cc);
+background-image: -moz-linear-gradient(top, #0088cc, #0044cc);
+background-repeat: repeat-x;
+border-color: #0044cc #0044cc #002a80;
+border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0044cc', GradientType=0);
+filter: progid:dximagetransfor;
+border-radius:3px;
+  }
+#header
+{
+	border:1px solid black;
+	width:980px;
+	height: 170px;
+}
+#slides
+{
+	border:1px solid black;
+	width:500px;
+	height:350px;
+}
+
+#notificationdiv
+{	
+	height: auto;	
+	width:300px;
+	position: absolute;
+	margin-left:350px;
+	margin-top:-15px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 10px #999;
+	z-index: 100;
+	display: none;
+	background-color: #fff;
+}
+.notificationimg
+{
+	margin-top:5px;
+	margin-left:5px;
+	border-radius: 3px;
+}
+.notificationp
+{	
+	border-radius:3px;
+	box-shadow: 0px 0px 3px #999;
+	width:280px;
+	height:auto;
+	min-height: 70px;
+	margin-top:5px;
+	margin-bottom: 5px;
+	margin-left:10px;	
+	z-index: 100;
+	/*font:1em/1.3 "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Tahoma, sans-serif;*/
+	
+	/*background-image: url(../img/usery.png);
+	background-repeat: no-repeat;*/
+}
+.notificationp:hover
+{
+	background-color: #ddd;
+	cursor: pointer;
+}
+.notificationtext
+{
+	width:200px;
+	margin-top:-55px;
+	float:left;
+	margin-left:85px;	
+	z-index: 2;
+}
+#viewrequestdiv
+{
+	margin-left:20px;
+	margin-right:20px;
+	margin-top:130px;	
+}
+#menus
+{			
+	width:600px;
+	margin-left:200px;
+	margin-top:150px;	
+}
+#menus div
+{	
+	border:1px solid #ddd;
+	box-shadow: 0px 0px 5px #ddd;
+	border-radius: 3px;
+	text-decoration: none;
+	margin-left:10px;
+	margin-top:10px;
+	width:250px;
+	padding: 12px 15px;
+	font-weight: bold;
+	font-size:16px;
+	font:1em/1.3 "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Tahoma, sans-serif;
+	float:left;
+}
+a:hover
+{
+	text-decoration: none;
+}
+#transacmenu
+{	
+	margin-top:85px;
+	width:100%;
+	margin-left:0px;
+}
+#repayloan, #incsavingbalance
+{
+	border:1px solid #ddd;	
+	border-radius: 3px;
+	box-shadow: 0px 0px 5px #ddd;
+	font:1em/1.3 "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Tahoma, sans-serif;
+	font-weight: bold;	
+	z-index: 100;
+}
+#incsavingbalance
+{
+	margin-left:70px;
+}
+#incsavingbalance
+{
+	padding: 30px 45px;	
+}
+#repayloan
+{
+	padding: 30px 100px;
+	margin-left:170px;
+}
+#repayloandiv
+{	
+	width:292px;
+	margin-top:30px;
+	margin-left:170px;
+	position: absolute;
+	border:1px solid #ddd;	
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+	display: none;
+	background-color:white;
+}
+#repayloandiv table
+{
+	margin-top:150px;
+	margin:10px 15px;	
+}
+#incsavingbalancediv
+{
+	/*border:1px solid #ddd;
+	position: absolute;
+	border-top:none;
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+	margin-left:348px;
+	margin-top:20px;
+	width:305px;*/
+	
+}
+#incsavingbalancediv table
+{	
+	width:80%;
+	margin-top:80px;
+}
+#incsavingbalancediv table th
+{
+	color:#0088cc;
+	font:1em/1.3 "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Tahoma, sans-serif;
+	font-weight:bold;
+	font-size: 14px;
+	text-align: center;
+}
+#incsavingbalancediv table td
+{
+	text-align: center;
+}
+.table-header, .table .table-header
+{
+	color:#0088cc;
+	font:1em/1.3 "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Tahoma, sans-serif;
+	font-weight:bold;
+	font-size: 14px;
+	text-align: center;
+}
+#loanextensiontable
+{
+	width:50%;
+	margin-top:120px;	
+}
+#changeunclerkdiv, #changepwclerkdiv
+{
+	position: absolute;
+	width: 400px;
+	height: 200px;
+	background-color: rgba(0,0,0,0.8);	
+	border-radius:10px;
+	z-index: 1500;
+	margin-top:0px;
+	margin-left:300px;
+	display: none;
+}

@@ -1,0 +1,92 @@
+ {% extends "base.html" %}
+
+  {% block title %} Edit Profile {% endblock %}
+  {% block content %}
+
+		<form method="post" action="">
+			<div class="input-append pull-right" id='searchdiv'>
+				<label style='float:left;margin-top:5px;color:#667'>Enter Member Id:&nbsp;</label>
+    			<input type="text" class="span2" placeholder='MemberId' name='' data-provide='typeahead' >
+    			<button type="submit" class="btn"><i class="icon-search"></i></button>
+	  		</div>
+  		</form>
+      
+      <div id='profileimage' >
+        <img src='../static/assets/img/aladin.jpg' >	
+        <button type='submit' class='btn' style='float:right;margin-right:40px;margin-top:10px;'><i class='icon-edit'></i>&nbsp;Change Photo</button>
+      </div>
+      <div id='memberprofile'>
+        
+      <div class="accordion" id="accordion2">
+        <div class="accordion-group">
+          <div class="accordion-heading">
+            <a class="accordion-toggle titles" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                PERSONAL INFORMATION
+            </a>
+          </div>
+          <div id="collapseOne" class="accordion-body collapse in">
+            <div class="accordion-inner">
+              <form>
+                <table align='center' class='table'>                    
+                  <tr><td class='lbl'>First Name:&nbsp;</td><td><input type='text' >  </td></tr>         
+                  <tr><td class='lbl'>Father Name:&nbsp;</td><td><input type='text' ></td></tr>
+                  <tr><td class='lbl'>Grand Father Name:&nbsp;</td><td><input type='text' ></td></tr>
+                  <tr><td class='lbl'>Age:&nbsp;</td><td><input type='text' ></td></tr>                
+                  <tr><td class='lbl'>Salary:&nbsp;</td><td><input type='text' ></td></tr>            
+                  <tr><td colspan='2' ><button type='submit' class='btn btn-primary' style='float:right;margin-right:115px;'><i class='icon-edit icon-white'></i>&nbsp;Edit</button></td></tr>            
+                </table>            
+              </form>
+            </div>
+          </div>
+        </div>
+      <div class="accordion-group">
+        <div class="accordion-heading">
+          <a class="accordion-toggle titles" data-toggle="collapse" data-parent="#accordion2" href="#address">
+            ADDRESS
+          </a>
+        </div>
+        <div id="address" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <table align='center' class='table'>
+              <tr><td class='lbl'>House No:&nbsp;</td><td><input type='text' ></td></tr>          
+              <tr><td class='lbl'>Kifle Ketema:&nbsp;</td><td><input type='text' ></td></tr>                    
+              <tr><td class='lbl'>P.O.Box:&nbsp;</td><td><input type='text' ></td></tr>                    
+              <tr><td class='lbl'>Kebele:&nbsp;</td><td><input type='text' ></td></tr>                    
+              <tr><td class='lbl'>Office Tel-No:&nbsp;</td><td><input type='text' ></td></tr>
+              <tr><td class='lbl'>Cellphone No:&nbsp;</td><td><input type='text' ></td></tr>                
+              <tr><td class='lbl'>Campus:&nbsp;</td><td><input type='text' ></td></tr>
+              <tr><td class='lbl'>Department:&nbsp;</td><td><input type='text' ></td></tr>                    
+              <tr><td colspan='2' ><button type='submit' class='btn btn-primary' style='float:right;margin-right:140px;'><i class='icon-edit icon-white'></i>&nbsp;Edit</button></td></tr>            
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-group">
+        <div class="accordion-heading">
+          <a class="accordion-toggle titles" data-toggle="collapse" data-parent="#accordion2" href="#associationinfo">
+            ASSOCIATION INFORMATION
+          </a>
+        </div>
+        <div id="associationinfo" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <table align='center' class='table'>
+              <tr><td class='lbl'>Current Loan Amount:&nbsp;</td><td><input type='text' ></td></tr>                                
+              <tr><td colspan='2' ><button type='submit' class='btn btn-primary' style='float:right;margin-right:115px;'><i class='icon-edit icon-white'></i>&nbsp;Edit</button></td></tr>            
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+        
+      </div>
+	</div>
+
+
+{% endblock %}
+<script type="text/javascript">
+	$(function(){
+		
+	});
+</script>
+

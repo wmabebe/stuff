@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+	<head>
+    <title>{% block title %} {% endblock %}</title>
+    
+    <meta charset="utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+    <link href="{{ STATIC_URL }}assets/css/bootstrap.css" rel="stylesheet">
+    <link href="{{ STATIC_URL }}assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="{{ STATIC_URL }}assets/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    <link href="{{ STATIC_URL }}assets/css/docs.css" rel="stylesheet">
+    <link href="{{ STATIC_URL }}assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}assets/css/style.css">
+    
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    
+    <link rel="shortcut icon" href="{{ STATIC_URL }}assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ STATIC_URL }}assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ STATIC_URL }}assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ STATIC_URL }}assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="{{ STATIC_URL }}assets/ico/apple-touch-icon-57-precomposed.png">
+
+</head>
+	<body>
+	<div id='container'>
+		{% block header %}
+      	<div class="navbar" id='navbar'>
+        <div class="navbar-inner" id='navbar-inner'>
+          <!--a class="brand" id='brand' href="#">Welcome to AAU Credit Association</a-->
+          <a class="brand" id='brand' href="/login/">AAUSCA</a>
+          <ul class="nav dropdown pull-right" id='nav'>
+            <li><a href='/login/' style='color:#099;font-size:14px;'>Welcome {% if user %} {{ user }} {% endif %}</a></li>
+              <li><a href="/login/"><i class="icon-home"></i>&nbsp;Home</a></li>
+              <li><a href="/request_loan/">Request Loan</a></li>
+              <li class='dropdown'>
+                <a href="#" class='dropdown-toggle active' data-toggle="dropdown">Forms&nbsp;<b class="caret"></b></a>
+                <ul class='dropdown-menu'>
+                  <li><a href='/register_member'><i class="icon-plus-sign"></i>&nbsp;Register New Member</a></li>
+                  <li><a href="/transactions/"><i class="icon-edit"></i>&nbsp;Transactions</a></li>
+                  <li><a href="/edit_profile/"><i class="icon-edit"></i>&nbsp;Edit Member&apos;s Profile</a></li>
+                  <li><a href="/view_profile/"><i class="icon-edit"></i>&nbsp;View Member&apos;s Profile</a></li>
+                  <li><a href="/extend_loan/"><i class="icon-calendar"></i>&nbsp;Loan Extension</a></li>
+                  <li><a href="#" data-toggle='modal' data-target='#loanrenewalmodal'><i class="icon-calendar"></i>&nbsp;Loan Renewal</a></li>
+                  <li><a href="#" data-toggle='modal' data-target='#campuschangemodal'><i class="icon-edit"></i>&nbsp;Campus Change</a></li>   
+                  <li><a href="#" data-toggle='modal' data-target='#reportleavemodal'><i class="icon-flag"></i>&nbsp;Report Leave</a></li>              
+                </ul>
+              </li>
+              <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" id='dropmenu'><i class="icon-wrench"></i>&nbsp;Settings <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="/change_username/"><i class="icon-edit"></i>&nbsp;Change username</a></li>                          
+                          <li><a href="/change_password/"><i class="icon-edit"></i>&nbsp;Change password</a></li>                          
+                          <li class="divider"></li>
+                          <li><a href="/logout/"><i class="icon-off"></i>&nbsp;Logout</a></li>
+                        </ul>
+                    </li>
+          </ul>                   
+        </div>
+    	</div>
+    
+		{% endblock %}
+
+
+		{% block content %}{% endblock %}
+
+		
+		{% block footer %}
+				<br/> <br/> <br/> <br/>
+			   <div>
+		        <p class="pull-right"><a href="#">Back to top</a></p>
+		        <p>Addis Ababa University Savings and Credit Association</p>	       
+		      </div>
+
+		{% endblock %}
+	</div>
+		
+	    
+	    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	    <script src="{{ STATIC_URL }}assets/js/jquery.js"></script>
+	    <script src="{{ STATIC_URL }}assets/js/jquery-1.8.0.min.js"></script>
+	    <script src="{{ STATIC_URL }}assets/js/respond.js"></script>
+	    <script src="{{ STATIC_URL }}assets/js/google-code-prettify/prettify.js"></script>
+	    <script src="{{ STATIC_URL }}assets/js/bootstrap-transition.js"></script>
+	    <script src="{{ STATIC_URL }}assets/js/bootstrap-alert.js"></script>
+	    <script src="{{ STATIC_URL }}assets/js/bootstrap-modal.js"></script>
+	    <script src="{{ STATIC_URL }}assets/js/bootstrap-dropdown.js"></script>
+	    <script src="{{ STATIC_URL }}assets/js/bootstrap-scrollspy.js"></script>
+	    <script src="{{ STATIC_URL }}assets/js/bootstrap-tab.js"></script>
+	    <script src="{{ STATIC_URL }}assets/js/bootstrap-tooltip.js"></script>
+	    <script src="{{ STATIC_URL }}assets/js/bootstrap-popover.js"></script>
+	    <script src="{{ STATIC_URL }}assets/js/bootstrap-button.js"></script>
+	    <script src="{{ STATIC_URL }}assets/js/bootstrap-collapse.js"></script>
+	    <script src="{{ STATIC_URL }}assets/js/bootstrap-carousel.js"></script>
+	    <script src="{{ STATIC_URL }}assets/js/bootstrap-typeahead.js"></script>
+	    <script src="{{ STATIC_URL }}assets/js/bootstrap-affix.js"></script>
+	    <script src="{{ STATIC_URL }}assets/js/application.js"></script>
+      <script src="{{ STATIC_URL }}assets/js/clerk.js"></script>
+	    <script src="{{ STATIC_URL }}assets/js/bootstrap-datetimepicker.min.js"></script>
+	</body>
+</html>

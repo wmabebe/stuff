@@ -1,0 +1,176 @@
+
+{% extends "base.html" %}
+  {% block title %} Home {% endblock %}
+
+  {% block content %}
+    <form>      
+      <div class="input-append pull-right" id='searchdiv'>
+        <label style='float:left;margin-top:5px;color:#667'>Enter Member Id:&nbsp;</label>
+          <input type="text" class="span2" placeholder='search...' >
+          <button type="submit" class="btn"><i class="icon-search"></i></button>
+      </div>
+      
+    </form>        
+      <div id='menus'>
+      <div>                       
+           &nbsp;&nbsp;<a href='/request_loan/'><i class="icon-plus-sign"></i>&nbsp; REQUEST LOAN</a>
+          </div>
+      <div>                        
+             &nbsp;&nbsp;<a href='/register_member/'><i class="icon-plus-sign"></i>&nbsp; REGISTER NEW MEMBER</a>
+          </div>
+      <div>                        
+             &nbsp;&nbsp;<a href='/transactions/'><i class="icon-edit"></i>&nbsp; TRANSACTIONS</a>
+          </div>
+      <div>                        
+             &nbsp;&nbsp;<a href='/edit_profile/'><i class="icon-edit"></i>&nbsp; EDIT MEMBER&apos;S PROFILE</a>
+          </div></a>
+      <div>                        
+             &nbsp;&nbsp;<a href='/view_profile/'><i class="icon-th-large"></i>&nbsp; VIEW MEMBER&apos;S PROFILE</a>
+          </div></a>
+      <div>                        
+             &nbsp;&nbsp;<a href='/extend_loan/'><i class="icon-calendar"></i>&nbsp; LOAN EXTENSION</a>
+          </div></a>
+      <div>                        
+             &nbsp;&nbsp;<a href='#' data-toggle='modal' data-target='#loanrenewalmodal'><i class="icon-calendar"></i>&nbsp; LOAN RENEWAL</a>
+          </div>
+      <div>                       
+           &nbsp;&nbsp;<a href='#' data-toggle='modal' data-target='#campuschangemodal'><i class="icon-edit"></i>&nbsp; CAMPUS CHANGE</a>
+          </div></a>
+      <div>                        
+             &nbsp;&nbsp;<a href='#' data-toggle='modal' data-target='#reportleavemodal'><i class="icon-flag"></i>&nbsp; REPORT LEAVE</a>
+          </div></a>
+      <div>                        
+             &nbsp;&nbsp;<a href='#' id='changeunclerk'><i class="icon-edit"></i>&nbsp; CHANGE YOUR EMAIL</a>
+          </div>
+      <div>                        
+             &nbsp;&nbsp;<a href='#' id='changepwclerk'><i class="icon-edit"></i>&nbsp; CHANGE YOUR PASSWORD</a>
+          </div>
+      <!--div>                        
+             &nbsp;&nbsp;<a href=''><i class="icon-eye-close"></i>&nbsp; SLEEP</a>
+          </div-->
+      <div>                        
+             &nbsp;&nbsp;<a href=''><i class="icon-off"></i>&nbsp; LOGOUT</a>
+          </div>
+      </div> 
+
+
+<div id='changeunclerkdiv'>
+  <form method='post'>
+    <table  style='margin:20px 15px;color:white;'>
+      <tr><td class='lbl'>Previous Username:</td><td><input type='text' ></td></tr>
+      <tr><td class='lbl'>New Username:</td><td><input type='text' ></td></tr>
+      <tr><td class='lbl'>Password:</td><td><input type='password' ></td></tr>
+      <tr><td></td><td><input type='submit' style='float:right;' class='btn btn-danger' value='Change'><button class='btn' style='float:right;margin-right:5px;' id='changeunclerkcancel'>Cancel</button></td></td></tr>
+    </table>
+    </form>
+  </div>
+
+<div id='changepwclerkdiv'>
+  <form method='post'>
+    <table  style='margin:20px 15px;color:white;'>
+      <tr><td class='lbl'>Previous Password:</td><td><input type='password' ></td></tr>
+      <tr><td class='lbl'>New Password:</td><td><input type='password' ></td></tr>
+      <tr><td class='lbl'>Confirm Password:</td><td><input type='password' ></td></tr>
+      <tr><td></td><td>&nbsp;<input type='submit' style='float:right;' class='btn btn-danger' value='Change'><button class='btn' style='float:right;margin-right:5px;' id='changeclerkpwcancel'>Cancel</button></td></tr>
+    </table>
+    </form>
+  </div>
+
+  <div class="modal hide fade" id='loanrenewalmodal'>
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h3 class='table-header'>LOAN RENEWAL FORM</h3>
+  </div>
+  <div class="modal-body">
+    <form method='post'>
+      <table align='center'>
+        <tr><td class='lbl'>Member ID:</td><td><input type='text'></td></tr>
+        <tr><td class='lbl'>First Name:</td><td><input type='text'></td></tr>
+        <tr><td class='lbl'>Father&apos;s Name:</td><td><input type='text'></td></tr>
+        <tr><td class='lbl'>Grand Father&apos;s Name:</td><td><input type='text'></td></tr>
+        <tr><td class='lbl'>Salary:</td><td><input type='number'></td></tr>
+        <tr><td class='lbl'>Percentage:</td><td><input type='number'></td></tr>
+        <tr><td class='lbl'>Campus:</td><td><select>
+          <option>Select Campus</option>
+        </select></td></tr>                
+      </table>    
+  </div>
+  <div class="modal-footer">    
+    <button class='btn btn-primary' type='submit' style='margin-right:85px'>Request</button>
+  </div>
+  </form>    
+</div>
+
+<div class="modal hide fade" id='campuschangemodal'>
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h3 class='table-header'>CAMPUS CHANGE </h3>
+  </div>
+  <div class="modal-body">
+    <form method='post'>
+      <table align='center'>
+        <tr><td class='lbl'>Member ID:</td><td><input type='text'></td></tr>
+        <tr><td class='lbl'>First Name:</td><td><input type='text'></td></tr>
+        <tr><td class='lbl'>Father&apos;s Name:</td><td><input type='text'></td></tr>
+        <tr><td class='lbl'>Grand Father&apos;s Name:</td><td><input type='text'></td></tr>
+        <tr><td class='lbl'>The New Campus:</td><td><select>
+          <option>Select Campus</option>
+        </select></td></tr>
+        <tr><td class='lbl'>Salary:</td><td><input type='number'></td></tr>                
+      </table>
+  </div>
+  <div class="modal-footer">    
+    <button class='btn btn-primary' type='submit' style='margin-right:85px'>Submit</button>
+    </form>
+  </div>
+</div>
+<div class="modal hide fade" id='reportleavemodal'>
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h3 class='table-header'>REPORT LEAVE FORM</h3>
+  </div>
+  <div class="modal-body">
+    <form>
+      <table align='center'>
+        <tr><td class='lbl'>Member ID:</td><td><input type='text'></td></tr>
+        <tr><td class='lbl'>First Name:</td><td><input type='text'></td></tr>
+        <tr><td class='lbl'>Father&apos;s Name:</td><td><input type='text'></td></tr>
+        <tr><td class='lbl'>Grand Father&apos;s Name:</td><td><input type='text'></td></tr>
+        <tr><td class='lbl'>Leave Reason:</td><td><textarea cols='3' rows='4'></textarea></td></tr>        
+      </table>
+  </div>
+  <div class="modal-footer">
+    <button class='btn btn-primary' type='submit' style='margin-right:85px'>Report Leave</button>
+    </form>
+  </div>
+</div>
+
+<br><br>
+  </div>  
+
+
+{% endblock %}
+
+<script type="text/javascript">
+  $(function(){
+      $('#changeunclerk').click(function(){
+          $('#changeunclerkdiv').show();
+          return false;
+      });
+      $('#changeunclerkcancel').click(function(){
+          $('#changeunclerkdiv').hide();
+          return false;
+      });
+      $('#changepwclerk').click(function(){
+          $('#changepwclerkdiv').show();
+          return false;
+      });
+      $('#changeclerkpwcancel').click(function(){
+          $('#changepwclerkdiv').hide();
+          return false;
+      });
+  });
+</script>
+
+
+

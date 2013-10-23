@@ -1,0 +1,55 @@
+
+{% extends "base.html" %}
+  {% block title %} Home {% endblock %}
+
+  {% block content %}
+    <form>      
+      <div class="input-append pull-right" id='searchdiv'>
+        <label style='float:left;margin-top:5px;color:#667'>Enter Member Id:&nbsp;</label>
+          <input type="text" class="span2" placeholder='search...' >
+          <button type="submit" class="btn"><i class="icon-search"></i></button>
+      </div>      
+    </form>        
+    <div id='transacmenu'>
+      <a href='#' id='repayloan'>REPAY LOAN</a>      
+      <!--a href="#" id='incsavingbalance'>INCREMENT SAVING BALANCE</a-->
+      <div id='repayloandiv'>
+        <form method='post' action='' id='repayloanform'><br>
+            <table align='center'>
+              <tr><td class='lbl'>Member Id:</td><td><input class='span2' type='text' /></td></tr>
+              <tr><td class='lbl'>Full Name:</td><td><input class='span2' type='text' /></td></tr>
+              <tr><td class='lbl'>Loan Amount:</td><td><input class='span2' type='text' disabled=true ></td></tr>
+              <tr><td class='lbl'>Paid Amount:</td><td><input class='span2' type='number' /></td></tr>              
+              <tr><td colspan='2'><button style='float:right;' class='btn btn-success'><i class="icon-ok-sign icon-white"></i>&nbsp;Submit</button></td></tr>
+            </table>
+        </form>
+      </div>
+      <div id='incsavingbalancediv'>
+          <form method='post' action='' id='incsavingbalanceform'>
+            <table class='table table-striped' align='center'>
+              <tr><th>Member Id</th><th>Full Name</th><th>Current Saving Balance</th><th>Month</th><th>Action</th></tr>
+              <tr><td>0357</td><td>Abebe Kebede Dessalegn</td><td>5300</td><td>June</td>
+              <td colspan='2'><button style='' class='btn btn-info'><i class="icon-plus-sign icon-white"></i>&nbsp;Increment</button></td></tr>
+              <tr><td>0357</td><td>Abebe Kebede Dessalegn</td><td>5300</td><td>June</td>
+              <td colspan='2'><button style='' class='btn btn-info'><i class="icon-plus-sign icon-white"></i>&nbsp;Increment</button></td></tr>
+              <tr><td>0357</td><td>Abebe Kebede Dessalegn</td><td>5300</td><td>June</td>
+              <td colspan='2'><button style='' class='btn btn-info'><i class="icon-plus-sign icon-white"></i>&nbsp;Increment</button></td></tr>
+              <tr><td>0357</td><td>Abebe Kebede Dessalegn</td><td>5300</td><td>June</td>
+              <td colspan='2'><button style='' class='btn btn-info'><i class="icon-plus-sign icon-white"></i>&nbsp;Increment</button></td></tr>
+            </table>
+          </form>
+
+{% endblock %}
+
+<script type="text/javascript">
+  $(function(){
+
+    $('#repayloan').click(function(){
+
+        $('#repayloandiv').slideToggle();
+        return false;
+    });
+    
+  });
+</script>
+

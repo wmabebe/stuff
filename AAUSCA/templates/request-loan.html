@@ -1,0 +1,55 @@
+  {% extends "base.html" %}
+
+    {% block title %} Request Loan {% endblock %}
+    {% block content %}
+
+    <form>
+      <div class="input-append pull-right" id='searchdiv'>
+        <label style='float:left;margin-top:5px;color:#667'>Enter Member Id:&nbsp;</label>
+          <input type="text" class="span2" placeholder='search...' value='0375'>
+          <button type="submit" class="btn"><i class="icon-search"></i></button>
+        </div>
+      </form>   
+      <form>
+        <table align='center' class='table table-bordered table-condensed' id='request-table1'>
+          <tr><td class='lbl'>Id:&nbsp;</td><td><input type='text' disabled='true' value='0375'></td></tr>
+          <tr><td class='lbl'>First Name:&nbsp;</td><td><input type='text' disabled='true' value='Abebe'></td></tr>
+          <tr><td class='lbl'>Father&apos;s Name:&nbsp;</td><td><input type='text' disabled='true' value='Kebebe'></td></tr>
+          <tr><td class='lbl'>Grand Father&apos;s Name:&nbsp;</td><td><input type='text' disabled='true' value='Solomon'></td></tr>
+          <tr><td class='lbl'>Age:&nbsp;</td><td><input type='text' disabled='true' value='47'></td></tr>
+          <tr><td class='lbl'>Office Tel-No:&nbsp;</td><td><input type='text' disabled='true' value='0112234567'></td></tr>
+          <tr><td class='lbl'>Cellphone No:&nbsp;</td><td><input type='text' disabled='true' value='0912345678'></td></tr>
+          <tr><td class='lbl'>Salary:&nbsp;</td><td><input type='text' disabled='true' value='3500'></td></tr>          
+          <tr><td class='lbl'>Campus:&nbsp;</td><td><input type='text' disabled='true' value='4 kilo'></td></tr>
+          <tr><td class='lbl'>Department:&nbsp;</td><td><input type='text' disabled='true' value='Chemistry'></td></tr>
+          <tr><td class='lbl'>Previous Loan Amount:&nbsp;</td><td><input type='text' disabled='true' value='2150.50'></td></tr>                   
+          <tr><td class='lbl'>Loan Amount:&nbsp;</td><td><input type='text' value='15000'></td></tr>
+          <tr><td class='lbl'>Loan Request Reason:&nbsp;</td><td><textarea cols='3' rows='4'></textarea></td></tr>
+          <tr><td class='lbl'>Loan Repayment Months:&nbsp;</td><td><select>
+            <option>Select No Of Months</option>
+          </select></td></tr>
+          <tr><td colspan='2'><button class='btn btn-primary pull-right' style='margin-right:100px;' id='loan-next'>Next</button></td></tr>
+        </table>
+        <table align='center' style='display:none;' class='table table-bordered table-condensed' id='request-table2'>
+          <tr><td class='lbl'>Enter Guarantor Id:&nbsp;</td><td><input type='text' value='0719'></td></tr>
+          <tr><td class='lbl'>First Name:&nbsp;</td><td><input type='text' disabled='true' value='Bekele'></td></tr>
+          <tr><td class='lbl'>Father&apos;s Name:&nbsp;</td><td><input type='text' disabled='true' value='Yohannes'></td></tr>
+          <tr><td class='lbl'>Grand Father&apos;s:&nbsp;</td><td><input type='text' disabled='true' value='Abrham'></td></tr>
+          <tr><td class='lbl'>Salary:&nbsp;</td><td><input type='text' disabled='true' value='4300'></td></tr>
+          <tr><td class='lbl'>Guarantee Count</td><td><input type='text' disabled='true' value='1'></td></tr>
+          <tr><td colspan='2'><input type='submit' style='margin-right:140px;' class='btn btn-success pull-right' value='Request Loan'/></td></tr>
+        </table>
+      </form>
+  </div>
+  {% endblock %}
+  
+<script type="text/javascript">
+  $(function(){
+    $('#loan-next').click(function(){
+      $('#request-table1').css('display','none');
+      $('#request-table2').show();
+      return false;
+    });
+  });
+</script>
+

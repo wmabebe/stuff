@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %} Login {% endblock %}
+
+
+{% block header %}
+        <div class="navbar" id='navbar'>
+        <div class="navbar-inner" id='navbar-inner'>
+          <!--a class="brand" id='brand' href="#">Welcome to AAU Credit Association</a-->
+          <a class="brand" id='brand' href="/home_page/">AAUSCA</a>
+                       
+        </div>
+      </div>
+    
+    {% endblock %}
+
+{% block content %}
+
+      {% if errors %}
+          <div class="alert alert-error">
+              <button type="button" class="close" data-dismiss="alert">x</button>
+                <strong>Oh snap!</strong> 
+                {% for i in errors %}
+                  <li> {{ i }} </li>
+                {% endfor %}
+          </div>
+      {% endif %}              
+      
+
+	<div class="row-fluid">
+		<div class="span2">
+			
+		</div>
+		<div class="span4">
+			<form class="form-horizontal" method="post" action="/login/">
+            	<legend>Login</legend>
+              <p class="text-error">For administrators use only!</p>
+            	<div class="control-group">
+            		<label class="control-label" for="inputEmail">UserId/Email</label>
+            		<div class="controls">
+            			<input placeholder="UserId/Email" id="inputEmail" type="text" name="userIdEmail">
+            		</div>
+            	</div>
+
+            	<div class="control-group">
+            		<label class="control-label" for="inputPassword">Password</label>  	
+            		<div class="controls">
+            			<input placeholder="Password" id="inputPassword" type="password" name="password">
+            		</div>
+            	</div>
+
+                  <div class="control-group">
+                        <label></label>   
+                        <div class="controls">
+                              <button type="submit" class="btn">Login</button>
+                        </div>
+                  </div>           	
+          	</form>
+		</div>
+	</div>
+{% endblock %}

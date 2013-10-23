@@ -1,0 +1,49 @@
+	{% extends "aausca-site-base.html" %}
+
+		{% block title %} AAUSCA home {% endblock %}
+		{% block content %}
+
+    <div class='thethree' id='the-association'>
+    <div id='theassociation' class='thethreeheaders'>
+      <p>
+        THE ASSOCIATION<br>
+        <i>Alittle about the association</i>
+      </p>
+    </div>
+    <div class='thethreecontent'>
+      <p>
+        Addis Ababa is the largest city in Ethiopia, with a population of 3,384,569 according to the 2007 population census with annual growth rate of 3.8%. Based on this estimation.
+      </p>
+      <a href='' class='btn btn-info' id='readmore' style='float:right;margin-top:-10px;'>Read more</a>
+    </div>
+  </div>
+  <div class='thethree' id='member-login-index'>
+    <div id='themember' class='thethreeheaders'>
+      <p>
+        MEMBER<br>
+        <i>Login as a member</i>
+      </p>
+    </div>
+    <div id='userlogindiv'>
+      <form method="post" action="/member_login/">
+        <input type='text' name='memberIdEmail' id='username' placeholder='  memberId or email' />
+        <input type='password' name='password' id='password' placeholder='&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;******************' />
+        <input type='submit' class='btn btn-primary' id='loginbutton' name='login' value='login' />
+      </form>
+    </div>
+  </div>
+  <div class='thethree' id='admin-login-index'>
+    <div id='theadmin' class='thethreeheaders'>
+      <p>
+        ADMINISTRATOR <br>
+        <a href="/login_page/"><i>Login as an administrator</i> </a> 
+      </p>
+    </div>
+    <div class='thethreecontent'>
+      <p>
+        Addis Ababa is the largest city in Ethiopia, with a population of 3,384,569 according to the 2007 population census with annual growth rate of 3.8%. Based on this estimation.
+      </p>
+    </div>
+  </div>
+
+    {% endblock %}

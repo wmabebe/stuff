@@ -1,0 +1,88 @@
+
+{% extends "base.html" %}
+  {% block title %} Home {% endblock %}
+
+  {% block header %}
+  {% endblock %}
+
+  {% block content %}
+	<div id='container'>
+		<div class="navbar" id='navbar'>
+  			<div class="navbar-inner" id='navbar-inner'>
+    			<!--a class="brand" id='brand' href="#">Welcome to AAU Credit Association</a-->
+    			<a class="brand" id='brand' href="#">AAUSCA</a>
+    			<ul class="nav dropdown pull-right" id='nav'>
+    				<li><a href='#' style='color:#099;font-size:14px;'><!--img src="img/usery.png" style='width:30px;heigth:25px;border-radius:3px;margin-top:-10px;'-->&nbsp;Welcome admin-2</a></li>
+      				<li><a href="#" id='notifications'><!--i class="icon-home"></i-->&nbsp;Notifications&nbsp;<div style='width:20px;color:white;float:right;text-align:center;border-radius:30px;background-color:red;'>1</div></a></li>
+      				<li class='active'><a href="#">View Request</a></li>
+      				<li class='dropdown'>
+      					<a href="#" class='dropdown-toggle active' data-toggle="dropdown">Create Report&nbsp;<b class="caret"></b></a>
+      					<ul class='dropdown-menu'>
+                  <li><a href='registration.html'><i class="icon-plus-sign"></i>&nbsp;Register New Member</a></li>
+                  <li><a href="#"><i class="icon-edit"></i>&nbsp;Edit Balances</a></li>
+                  <li><a href="editmemberprofile.html"><i class="icon-edit"></i>&nbsp;Edit Member&apos;s Profile</a></li>
+      						<li><a href="viewmemberprofile.html"><i class="icon-edit"></i>&nbsp;View Member&apos;s Profile</a></li>
+	      					<li><a href="#"><i class="icon-calendar"></i>&nbsp;Loan Extension</a></li>
+      						<li><a href="#"><i class="icon-edit"></i>&nbsp;Campus Change</a></li>      						
+      						<li><a href="#"><i class="icon-flag"></i>&nbsp;Report Leave</a></li>      				
+      					</ul>
+      				</li>
+      				<li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" id='dropmenu'><i class="icon-wrench"></i>&nbsp;Settings <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#"><i class="icon-eye-close"></i>&nbsp;Sleep</a></li>                          
+                          <li><a href="#"><i class="icon-edit"></i>&nbsp;Change username</a></li>                          
+                          <li><a href="#"><i class="icon-edit"></i>&nbsp;Change password</a></li>                          
+                          <li class="divider"></li>
+                          <li><a href="#"><i class="icon-off"></i>&nbsp;Logout</a></li>
+                        </ul>
+                    </li>
+    			</ul>    			    			
+  			</div>
+		</div>
+    <div id='notificationdiv'>        
+        <a href='#' style='text-decoration:none;' class='notificationa'><div class='notificationp'><img src="img/usery.png" class='notificationimg' /><p class='notificationtext' >0375 has requested a loan, yesterday at 09:29:41 PM</p></div></a> 
+        <a href='#' style='text-decoration:none;' class='notificationa'><div class='notificationp'><img src="img/usery.png" class='notificationimg' /><p class='notificationtext' >0375 has requested a loan, yesterday at 09:29:41 PM</p></div></a> 
+        <a href='#' style='text-decoration:none;' class='notificationa'><div class='notificationp'><img src="img/usery.png" class='notificationimg' /><p class='notificationtext' >0375 has requested a loan, yesterday at 09:29:41 PM</p></div></a> 
+        <a href='#' style='text-decoration:none;' class='notificationa'><div class='notificationp'><img src="img/usery.png" class='notificationimg' /><p class='notificationtext' >0375 has requested a loan, yesterday at 09:29:41 PM</p></div></a>         
+    </div>		
+		<!--form>
+			<div class="input-append pull-right" id='searchdiv'>
+				<label style='float:left;margin-top:5px;color:#667'>Enter Id:&nbsp;</label>
+    			<input type="text" class="span2" placeholder='search...' >
+    			<button type="submit" class="btn"><i class="icon-search"></i></button>
+	  		</div>
+  		</form-->	
+
+      <form>
+        <div id='viewrequestdiv'>
+          <table class='table table-striped'>
+            <tr style='color:#099;font-size:15px;font-family: sans-serif;'><th>Memeber ID</th><th>Request Type</th><th>Request Date</th><th>Requeted Amount</th><th>Guarantor[s]</th><th>Take Action</th></tr>
+            <tr><td><a id='mem-2' href='#'  data-toggle='modal' data-target='#requestdetails'>mem-2</a></td><td>Loan</td><td>Thursday, June 20 2013</td><td>1200 Birr</td><td></td><td><button type='submit' class='btn btn-success' >Approve&nbsp;<i class='icon-ok-sign icon-white'></i></button>&nbsp;<button type='submit' class='btn btn-danger'>Revoke&nbsp;<i class='icon-remove-sign icon-white'></i></button></td></tr>
+            <!--tr><td><a href='#'>0357</a></td><td>Loan</td><td>Sunday, May 12 2013</td><td>13562</td><td>Abebe</td><td><button type='submit' class='btn btn-success' >Grant&nbsp;<i class='icon-ok-sign icon-white'></i></button>&nbsp;<button type='submit' class='btn btn-danger'>Revoke&nbsp;<i class='icon-remove-sign icon-white'></i></button></td></tr>            
+            <tr><td><a href='#'>0357</a></td><td>Loan</td><td>Sunday, May 12 2013</td><td>13562</td><td>Abebe</td><td><button type='submit' class='btn btn-success' >Grant&nbsp;<i class='icon-ok-sign icon-white'></i></button>&nbsp;<button type='submit' class='btn btn-danger'>Revoke&nbsp;<i class='icon-remove-sign icon-white'></i></button></td></tr>
+            <tr><td><a href='#'>0357</a></td><td>Loan</td><td>Sunday, May 12 2013</td><td>13562</td><td>Abebe</td><td><button type='submit' class='btn btn-success' >Grant&nbsp;<i class='icon-ok-sign icon-white'></i></button>&nbsp;<button type='submit' class='btn btn-danger'>Revoke&nbsp;<i class='icon-remove-sign icon-white'></i></button></td></tr>
+            <tr><td><a href='#'>1092</a></td><td>Leave</td><td>Monday, May 13 2013</td><td></td><td></td><td><button type='submit' class='btn btn-success' >Grant&nbsp;<i class='icon-ok-sign icon-white'></i></button>&nbsp;<button type='submit' class='btn btn-danger'>Revoke&nbsp;<i class='icon-remove-sign icon-white'></i></button></td></tr-->
+            <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          </table>
+        </div>
+        <div class="modal hide fade" id='requestdetails' style='width:750px;'>
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h3 style='color:#099;'>Request Details</h3>
+          </div>
+          <div class="modal-body">
+            <table class='table table-striped'>
+            <tr style='color:#099;font-size:15px;font-family: sans-serif;'><th>Memeber ID</th><th width="40%">Full Name</th><th width='40%'>Request Reason</th><th width="20%">Request Time</th><th>Requeted Amount</th><th width="30%">Guarantor[s]</th></tr>
+            <tr><td>mem-2</td><td><a href="#">Addisu Hinsta</a></td><td>Reasons</td><td>08:25 AM</td><td>1200</td><td><a href="#"></a></td></tr>
+          </table>
+
+          </div>      
+  </div>
+      </form>
+      <!--div id='profileimage' >
+        <img src='img/aladin.jpg' >         
+      </div-->
+      
+{% endblock %}
+

@@ -1,0 +1,100 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+  <title>Request Loan</title>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" />    
+  <script type="text/javascript" src='js/jquery.js'></script>
+  <script type="text/javascript" src='js/bootstrap.js'></script>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+  <div id='container'>
+    <div class="navbar" id='navbar'>
+        <div class="navbar-inner" id='navbar-inner'>
+          <!--a class="brand" id='brand' href="#">Welcome to AAU Credit Association</a-->
+          <a class="brand" id='brand' href="#">AAU Credit Association Management System</a>
+          <ul class="nav dropdown pull-right" id='nav'>
+            <li><a href='#' style='color:#099;font-size:14px;'>Welcome Hannah</a></li>
+              <li><a href="clerkhome.html"><i class="icon-home"></i>&nbsp;Home</a></li>
+              <li class="active"><a href="#">Request Loan</a></li>
+              <li class='dropdown'>
+                <a href="#" class='dropdown-toggle' data-toggle="dropdown">Forms&nbsp;<b class="caret"></b></a>
+                <ul class='dropdown-menu'>
+                  <li><a href='registration.html'><i class="icon-plus-sign"></i>&nbsp;Register New Member</a></li>
+                  <li><a href="#"><i class="icon-edit"></i>&nbsp;Edit Balances</a></li>
+                  <li><a href="editmemberprofile.html"><i class="icon-edit"></i>&nbsp;Edit Member&apos;s Profile</a></li>
+                  <li><a href="viewmemberprofile.html"><i class="icon-edit"></i>&nbsp;View Member&apos;s Profile</a></li>
+                  <li><a href="#"><i class="icon-calendar"></i>&nbsp;Loan Extension</a></li>
+                  <li><a href="#"><i class="icon-edit"></i>&nbsp;Campus Change</a></li>                 
+                  <li><a href="#"><i class="icon-flag"></i>&nbsp;Report Leave</a></li>              
+                </ul>
+              </li>
+              <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" id='dropmenu'><i class="icon-wrench"></i>&nbsp;Settings <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#"><i class="icon-eye-close"></i>&nbsp;Sleep</a></li>                          
+                          <li><a href="#"><i class="icon-edit"></i>&nbsp;Change username</a></li>                          
+                          <li><a href="#"><i class="icon-edit"></i>&nbsp;Change password</a></li>                          
+                          <li class="divider"></li>
+                          <li><a href="#"><i class="icon-off"></i>&nbsp;Logout</a></li>
+                        </ul>
+                    </li>
+          </ul>                   
+        </div>
+    </div>    
+    <form>
+      <div class="input-append pull-right" id='searchdiv'>
+        <label style='float:left;margin-top:5px;color:#667'>Enter Member Id:&nbsp;</label>
+          <input type="text" class="span2" placeholder='search...' value='0375'>
+          <button type="submit" class="btn"><i class="icon-search"></i></button>
+        </div>
+      </form>   
+      <form>
+        <table align='center' class='table table-bordered table-condensed' id='request-table1'>
+          <tr><th colspan=2 class='table-header'>LOAN REQUEST FORM</th></tr>
+          <tr><td class='lbl'>Id:&nbsp;</td><td><input type='text' disabled='true' value='0375'></td></tr>
+          <tr><td class='lbl'>First Name:&nbsp;</td><td><input type='text' disabled='true' value='Abebe'></td></tr>
+          <tr><td class='lbl'>Father&apos;s Name:&nbsp;</td><td><input type='text' disabled='true' value='Kebebe'></td></tr>
+          <tr><td class='lbl'>Grand Father&apos;s Name:&nbsp;</td><td><input type='text' disabled='true' value='Solomon'></td></tr>
+          <tr><td class='lbl'>Age:&nbsp;</td><td><input type='text' disabled='true' value='47'></td></tr>
+          <tr><td class='lbl'>Office Tel-No:&nbsp;</td><td><input type='text' disabled='true' value='0112234567'></td></tr>
+          <tr><td class='lbl'>Cellphone No:&nbsp;</td><td><input type='text' disabled='true' value='0912345678'></td></tr>
+          <tr><td class='lbl'>Salary:&nbsp;</td><td><input type='text' disabled='true' value='3500'></td></tr>          
+          <tr><td class='lbl'>Campus:&nbsp;</td><td><input type='text' disabled='true' value='4 kilo'></td></tr>
+          <tr><td class='lbl'>Department:&nbsp;</td><td><input type='text' disabled='true' value='Chemistry'></td></tr>
+          <tr><td class='lbl'>Previous Loan Amount:&nbsp;</td><td><input type='text' disabled='true' value='2150.50'></td></tr>                   
+          <tr><td class='lbl'>Loan Amount:&nbsp;</td><td><input type='text' value='15000'></td></tr>
+          <tr><td class='lbl'>Loan Request Reason:&nbsp;</td><td><textarea cols='3' rows='4'></textarea></td></tr>
+          <tr><td class='lbl'>Loan Repayment Months:&nbsp;</td><td><select>
+            <option>Select No Of Months</option>
+          </select></td></tr>
+          <tr><td colspan='2'><button class='btn btn-primary pull-right' style='margin-right:100px;' id='loan-next'>Next</button></td></tr>
+        </table>
+        <table align='center' style='display:none;' class='table table-bordered table-condensed' id='request-table2'>
+          <tr><td class='lbl'>Enter Guarantor Id:&nbsp;</td><td><input type='text' value='0719'></td></tr>
+          <tr><td class='lbl'>First Name:&nbsp;</td><td><input type='text' disabled='true' value='Bekele'></td></tr>
+          <tr><td class='lbl'>Father&apos;s Name:&nbsp;</td><td><input type='text' disabled='true' value='Yohannes'></td></tr>
+          <tr><td class='lbl'>Grand Father&apos;s:&nbsp;</td><td><input type='text' disabled='true' value='Abrham'></td></tr>
+          <tr><td class='lbl'>Salary:&nbsp;</td><td><input type='text' disabled='true' value='4300'></td></tr>
+          <tr><td class='lbl'>Guarantee Count</td><td><input type='text' disabled='true' value='1'></td></tr>
+          <tr><td colspan='2'><input type='submit' style='margin-right:140px;' class='btn btn-success pull-right' value='Request Loan'/></td></tr>
+        </table>
+      </form>
+  </div>
+</body>
+<script type="text/javascript">
+  $(function(){
+    $('#loan-next').click(function(){
+      $('#request-table1').css('display','none');
+      $('#request-table2').show();
+      return false;
+    });
+  });
+</script>
+
+</html>
